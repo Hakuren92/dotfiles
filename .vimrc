@@ -56,13 +56,17 @@ let g:lightline = {
 
 " Easy-align config
 nmap ga <Plug>(EasyAlign)
+vmap ga <Plug>(EasyAlign)
 
 " Emmet config
-nnoremap <leader>em <c-y>, " Launch emmet
+nmap <leader>em <c-y>, " Launch emmet
+
+" NERDTree config
+nmap <leader>nt :NERDTree<CR>
 
 " JSHint2 config
-let jshint2_read = 1
-let jshint2_save = 1
+let jshint2_read       = 1
+let jshint2_save       = 1
 let jshint2_min_height = 3
 let jshint2_max_height = 12
 
@@ -108,14 +112,18 @@ noremap <leader>w :bn<CR> " Next buffer
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 
-set incsearch " Incremental search
-set hlsearch " Highlight search by defualt
+" Reload .vimrc without restarting. Useful during development
+nmap <leader><F12> :so $MYVIMRC<CR>
+
+set incsearch     " Incremental search
+set hlsearch      " Highlight search by defualt
 
 set scrolloff=3
 
-set expandtab " Use space instead of tab
-set autoindent " Autoindentation. Mostly works
-set smartindent " Smart indent for c-like languages
-set shiftwidth=4 " Tabs are 4 spaces
+set expandtab     " Use space instead of tab
+set autoindent    " Autoindentation. Mostly works
+set smartindent   " Smart indent for c-like languages
+set shiftwidth=4  " Tabs are 4 spaces
 set softtabstop=4 " Same as above but in insert mode
+set smartcase     " Make searches not care about case unless case differs in search string
 
