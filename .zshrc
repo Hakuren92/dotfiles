@@ -83,3 +83,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Git aliases
+alias ga='git add'                   # Git add
+alias gc='git commit'                # Git commit
+alias gci='git commit --interactive' # Git commit, interactive
+alias gs='git status'
+
+# Ls aliases
+alias l='ls -lFh'   # Size, type, human readable
+alias la='ls -lAFh' # List, almost all, type, human readable
+alias lr='ls -lRFh' # List, recursive, type, human readable
+
+# Pipe aliases
+alias -g H='| head' # Pipe head to command
+alias -g T='| tail' # Pipe tail to command
+alias -g G='| grep' # Pipe grep to command
+alias -g L='| less' # Pipe less to command
+alias -g M='| most' # Pipe most to command
