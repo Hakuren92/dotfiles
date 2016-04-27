@@ -48,16 +48,6 @@ let mapleader = " "
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Lightline config
-let g:lightline = {
-        \ 'colorscheme': 'solarized_dark',
-        \ }
-set laststatus=2
-
-if !has('gui_running')
-    set t_Co=256
-endif
-
 " Easy-align config
 nmap ga <Plug>(EasyAlign)
 vmap ga <Plug>(EasyAlign)
