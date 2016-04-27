@@ -81,43 +81,27 @@ vnoremap <silent><F3> :lprevious<CR>
 
 " ================================ Settings
 "
-set nocompatible " Set not compatible with vi
-
-syntax on " Turn on syntax highlighting
-
+set nocompatible               " Set not compatible with vi
+syntax on                      " Turn on syntax highlighting
 filetype on
 filetype plugin indent on
-
-set autoread " Reload files written outside of vim
-
+set autoread                   " Reload files written outside of vim
 set encoding=utf8
 set fileencoding=utf8
-
 set backspace=indent,eol,start " Enable backspace to clear lots of stuff
-
-set hidden " Hide abandoned buffers
-
-set fileformat=unix " Unix line endings
-
-noremap <leader>q :bp<CR> " Previous buffer
-noremap <leader>w :bn<CR> " Next buffer
-
-" Save with ctrl+s
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
+set hidden                     " Hide abandoned buffers
+set fileformat=unix            " Unix line endings
+set incsearch                  " Incremental search
+set hlsearch                   " Highlight search by defualt
+set scrolloff=3
+set expandtab                  " Use space instead of tab
+set autoindent                 " Autoindentation. Mostly works
+set smartindent                " Smart indent for c-like languages
+set shiftwidth=4               " Tabs are 4 spaces
+set softtabstop=4              " Same as above but in insert mode
+set smartcase                  " Make searches not care about case unless case differs in search string
+noremap <leader>q :bp<CR>      " Previous buffer
+noremap <leader>w :bn<CR>      " Next buffer
 
 " Reload .vimrc without restarting. Useful during development
 nmap <leader><F12> :so $MYVIMRC<CR>
-
-set incsearch     " Incremental search
-set hlsearch      " Highlight search by defualt
-
-set scrolloff=3
-
-set expandtab     " Use space instead of tab
-set autoindent    " Autoindentation. Mostly works
-set smartindent   " Smart indent for c-like languages
-set shiftwidth=4  " Tabs are 4 spaces
-set softtabstop=4 " Same as above but in insert mode
-set smartcase     " Make searches not care about case unless case differs in search string
-
