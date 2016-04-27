@@ -26,7 +26,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
 Plug 'Shutnik/jshint2.vim' " Is this conflicting with syn?
-Plug 'itchyny/lightline.vim'
 Plug 'skammer/vim-css-color'
 
 " Autocomplete
