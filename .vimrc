@@ -50,8 +50,13 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Lightline config
 let g:lightline = {
-	\ 'colorscheme': 'solarized',
+        \ 'colorscheme': 'solarized_dark',
         \ }
+set laststatus=2
+
+if !has('gui_running')
+    set t_Co=256
+endif
 
 " Easy-align config
 nmap ga <Plug>(EasyAlign)
