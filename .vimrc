@@ -78,6 +78,11 @@ nnoremap <silent><F3> :lprevious<CR>
 inoremap <silent><F3> <C-O>:lprevious<CR>
 vnoremap <silent><F3> :lprevious<CR>
 
+" Navigate between vim windows.
+map <silent> <leader><Left>  :wincmd h<CR>
+map <silent> <leader><Right> :wincmd l<CR>
+map <silent> <leader><UP>    :wincmd j<CR>
+map <silent> <leader><Down>  :wincmd k<CR>
 " ____ Settings ____
 " ==================
 "
