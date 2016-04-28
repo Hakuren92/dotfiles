@@ -1,6 +1,3 @@
-" Config file for Vim
-"
-
 " ____ Plugins ____
 " =================
 "

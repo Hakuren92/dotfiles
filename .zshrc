@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 alias ga='git add'                   # Git add
 alias gc='git commit'                # Git commit
 alias gci='git commit --interactive' # Git commit, interactive
-alias gs='git status'
+alias gs='git status'                # Git status
 
 # Ls aliases
 alias l='ls -lFh'   # Size, type, human readable
