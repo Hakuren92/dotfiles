@@ -101,3 +101,14 @@ alias -g T='| tail' # Pipe tail to command
 alias -g G='| grep' # Pipe grep to command
 alias -g L='| less' # Pipe less to command
 alias -g M='| most' # Pipe most to command
+
+# TMUX
+if which tmux >/dev/null 2>&1; then
+    # If no tmux session is started, start a new one
+    test -z ${TMUX} && tmux
+
+    # When quitting tmux, try to attach
+    while test -z ${TMUX}; do
+        tmux attach || break
+    done
+fi
