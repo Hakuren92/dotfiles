@@ -1,7 +1,8 @@
 " Config file for Vim
 "
 
-" ========================= Plugins
+" ____ Plugins ____
+" =================
 "
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -40,7 +41,8 @@ Plug 'mattn/emmet-vim'
 
 call plug#end()
 
-" ============================= Configuration
+" ____ Configuration ____
+" =======================
 "
 let mapleader = " "
 
@@ -79,7 +81,8 @@ nnoremap <silent><F3> :lprevious<CR>
 inoremap <silent><F3> <C-O>:lprevious<CR>
 vnoremap <silent><F3> :lprevious<CR>
 
-" ================================ Settings
+" ____ Settings ____
+" ==================
 "
 set nocompatible               " Set not compatible with vi
 syntax on                      " Turn on syntax highlighting
