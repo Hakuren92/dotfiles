@@ -47,6 +47,9 @@ let mapleader = " "
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" DelimitMate config
+let delimitMate_expand_cr = 1
+
 " Easy-align config
 nmap ga <Plug>(EasyAlign)
 vmap ga <Plug>(EasyAlign)
