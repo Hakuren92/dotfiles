@@ -75,20 +75,30 @@ inoremap <silent><F1> <C-O>:JSHint<CR>
 vnoremap <silent><F1> :JSHint<CR>
 
 " show next jshint error
-nnoremap <silent><F2> :lnext<CR>
-inoremap <silent><F2> <C-O>:lnext<CR>
-vnoremap <silent><F2> :lnext<CR>
+nnoremap <silent><F3> :lnext<CR>
+inoremap <silent><F3> <C-O>:lnext<CR>
+vnoremap <silent><F3> :lnext<CR>
 
 " show previous jshint error
-nnoremap <silent><F3> :lprevious<CR>
-inoremap <silent><F3> <C-O>:lprevious<CR>
-vnoremap <silent><F3> :lprevious<CR>
+nnoremap <silent><F2> :lprevious<CR>
+inoremap <silent><F2> <C-O>:lprevious<CR>
+vnoremap <silent><F2> :lprevious<CR>
 
 " Navigate between vim windows.
-map <silent> <leader><Left>  :wincmd h<CR>
-map <silent> <leader><Right> :wincmd l<CR>
-map <silent> <leader><Down>  :wincmd j<CR>
-map <silent> <leader><Up>    :wincmd k<CR>
+map <silent> <leader>h :wincmd h<CR>
+map <silent> <leader>l :wincmd l<CR>
+map <silent> <leader>j :wincmd j<CR>
+map <silent> <leader>k :wincmd k<CR>
+
+noremap <leader>q :bp<CR>      " Previous buffer
+noremap <leader>w :bn<CR>      " Next buffer
+
+" Resize windows in normal mode using keys on the numpad.
+nnoremap <Up>    <C-w>+
+nnoremap <Down>  <C-w>-
+nnoremap <Left>  <C-w><
+nnoremap <Right> <C-w>>
+
 " ____ Settings ____
 " ==================
 "
@@ -111,8 +121,6 @@ set smartindent                " Smart indent for c-like languages
 set shiftwidth=4               " Tabs are 4 spaces
 set softtabstop=4              " Same as above but in insert mode
 set smartcase                  " Make searches not care about case unless case differs in search string
-noremap <leader>q :bp<CR>      " Previous buffer
-noremap <leader>w :bn<CR>      " Next buffer
 
 " Reload .vimrc without restarting. Useful during development
 nmap <leader><F12> :so $MYVIMRC<CR>
