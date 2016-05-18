@@ -31,10 +31,13 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 
 " Syntax help
-Plug 'helino/vim-json'
-Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
+Plug 'sheerun/vim-polyglot'
+
+" Removed plugins temporarily as polygot 'should' replace them
+" Plug 'helino/vim-json'
+" Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
