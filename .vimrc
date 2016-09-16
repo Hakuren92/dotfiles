@@ -1,13 +1,42 @@
+" ____ Platform layer ____
+" ========================
+"
+if has('win32')
+	set backupdir=$HOME/vimfiles/backup,.
+	set directory=$HOME/vimfiles/temp//,.
+	set undodir=$HOME/vimfiles/undo,.
+else
+	set backupdir=~/.vim/backup,.
+	set directory=~/.vim/temp//,.
+	set undodir=~/.vim/undo,.
+endif
+
+if has('win32')
+	set guifont=Lucida_Console:h12
+endif
+
+if has('win32')
+	let my_plugged_path = '$HOME/vimfiles/plugged'
+else
+	let my_plugged_path = '~/.vim/plugged'
+endif
+
+if has('win32')
+	let my_plug_path = '$VIM/autoload/plug.vim'
+else
+	let my_plug_path = '~/.vim/autoload/plug.vim'
+endif
+
 " ____ Plugins ____
 " =================
 "
-if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob(my_plug_path))
+	silent !curl -fLo my_plug_path --create-dirs
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(my_plugged_path)
 
 " List all plugins with the 'Plug' command
 
