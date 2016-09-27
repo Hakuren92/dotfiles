@@ -169,5 +169,26 @@ set shiftwidth=4               " Tabs are 4 spaces
 set softtabstop=4              " Same as above but in insert mode
 set smartcase                  " Make searches not care about case unless case differs in search string
 
+" ____ Interface Settings ____
+" ============================
+"
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+let g:airline_theme='one'
+set background=light
+colors one
+highlight IncSearch guibg=green
+
 " Reload .vimrc without restarting. Useful during development
 nmap <leader><F12> :so $MYVIMRC<CR>
