@@ -12,7 +12,7 @@ else
 endif
 
 if has('win32')
-	set guifont=Lucida_Console:h12
+	set guifont=Droid_Sans_Mono_Slashed_for_Pow:h10
 endif
 
 if has('win32')
