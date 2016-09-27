@@ -96,8 +96,8 @@ nnoremap <F9> :make<CR>
 let delimitMate_expand_cr = 1
 
 " Easy-align config
-nmap ga <Plug>(EasyAlign)
-vmap ga <Plug>(EasyAlign)
+nmap gea <Plug>(EasyAlign)
+vmap gea <Plug>(EasyAlign)
 
 " Emmet config
 nmap <leader>em <c-y>, " Launch emmet
@@ -127,6 +127,7 @@ inoremap <silent><F2> <C-O>:lprevious<CR>
 vnoremap <silent><F2> :lprevious<CR>
 
 " Navigate between vim windows.
+
 map <silent> <leader>h :wincmd h<CR>
 map <silent> <leader>l :wincmd l<CR>
 map <silent> <leader>j :wincmd j<CR>
@@ -135,11 +136,15 @@ map <silent> <leader>k :wincmd k<CR>
 noremap <leader>q :bp<CR>      " Previous buffer
 noremap <leader>w :bn<CR>      " Next buffer
 
-" Resize windows in normal mode using keys on the numpad.
+" Resize windows in normal mode using the arrow keys.
 nnoremap <Up>    <C-w>+
 nnoremap <Down>  <C-w>-
 nnoremap <Left>  <C-w><
 nnoremap <Right> <C-w>>
+
+" Move in display lines instead of text lines
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 
 " ____ Settings ____
 " ==================
