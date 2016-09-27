@@ -63,6 +63,12 @@ Plug 'ternjs/tern_for_vim'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'vim-scripts/vim-stylus'
+
+" Others
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
 
 " Removed plugins temporarily as polygot 'should' replace them
 " Plug 'helino/vim-json'
