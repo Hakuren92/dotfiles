@@ -85,6 +85,13 @@ let mapleader = " "
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Add some make functions for different filetypes
+autocmd FileType python :set makeprg=python\ % 
+autocmd FileType python :set shellpipe= 
+
+" Bind :make to a single button
+nnoremap <F9> :make<CR>
+
 " DelimitMate config
 let delimitMate_expand_cr = 1
 
