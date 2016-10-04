@@ -105,6 +105,9 @@ nmap <leader>em <c-y>, " Launch emmet
 " NERDTree config
 nmap <leader>nt :NERDTree<CR>
 
+" Ag config
+nmap <leader><space> :Ag<space>
+
 " JSHint2 config
 let jshint2_read       = 1
 let jshint2_save       = 1
@@ -127,7 +130,6 @@ inoremap <silent><F2> <C-O>:lprevious<CR>
 vnoremap <silent><F2> :lprevious<CR>
 
 " Navigate between vim windows.
-
 map <silent> <leader>h :wincmd h<CR>
 map <silent> <leader>l :wincmd l<CR>
 map <silent> <leader>j :wincmd j<CR>
