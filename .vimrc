@@ -71,6 +71,7 @@ Plug 'vim-scripts/vim-stylus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rakr/vim-one'
+Plug 'hsanson/vim-android'
 
 " Removed plugins temporarily as polygot 'should' replace them
 " Plug 'helino/vim-json'
