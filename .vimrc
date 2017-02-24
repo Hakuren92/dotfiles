@@ -5,10 +5,12 @@ if has('win32')
 	set backupdir=$HOME/vimfiles/backup,.
 	set directory=$HOME/vimfiles/temp//,.
 	set undodir=$HOME/vimfiles/undo,.
+        set viewdir=$HOME/vimfiles/view,.
 else
 	set backupdir=~/.vim/backup,.
 	set directory=~/.vim/temp//,.
 	set undodir=~/.vim/undo,.
+        set viewdir=~/.vim/view,.
 endif
 
 if has('win32')
@@ -170,6 +172,8 @@ set smartindent                " Smart indent for c-like languages
 set shiftwidth=4               " Tabs are 4 spaces
 set softtabstop=4              " Same as above but in insert mode
 set smartcase                  " Make searches not care about case unless case differs in search string
+set foldmethod=syntax          " Make file foldable by syntax
+set nofoldenable " Do not fold on load
 
 " ____ Interface Settings ____
 " ============================
@@ -191,6 +195,9 @@ let g:airline_theme='one'
 set background=light
 colors one
 highlight IncSearch guibg=green
+
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
 " Reload .vimrc without restarting. Useful during development
 nmap <leader><F12> :so $MYVIMRC<CR>
