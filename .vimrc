@@ -102,7 +102,7 @@ nmap gea <Plug>(EasyAlign)
 vmap gea <Plug>(EasyAlign)
 
 " Emmet config
-nmap <leader>em <c-y>, " Launch emmet
+nmap gem <c-y>, " Launch emmet
 
 " NERDTree config
 nmap <leader>nt :NERDTree<CR>
@@ -139,6 +139,7 @@ map <silent> <leader>k :wincmd k<CR>
 
 noremap <leader>q :bp<CR>      " Previous buffer
 noremap <leader>w :bn<CR>      " Next buffer
+noremap <leader>e :wincmd p<CR>" Previous window
 
 " Resize windows in normal mode using the arrow keys.
 nnoremap <Up>    <C-w>+
