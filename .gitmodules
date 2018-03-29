@@ -1,3 +1,6 @@
 [submodule "tpm"]
 	path = tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "nord-gnome"]
+	path = nord-gnome
+	url = https://github.com/arcticicestudio/nord-gnome-terminal
