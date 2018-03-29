@@ -177,9 +177,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-let g:airline_theme='one'
+let g:airline_theme='nord'
 set background=light
-colors one
+colorscheme nord
 highlight IncSearch guibg=green
 
 autocmd BufWinLeave *.* mkview
