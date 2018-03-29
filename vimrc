@@ -18,66 +18,50 @@ if has('win32')
 endif
 
 if has('win32')
-	let my_plugged_path = '$HOME/vimfiles/plugged'
+	let pm_path = expand('$HOME/vimfiles/plugged')
 else
-	let my_plugged_path = '~/.vim/plugged'
-endif
-
-if has('win32')
-	let my_plug_path = '$VIM/autoload/plug.vim'
-else
-	let my_plug_path = '~/.vim/autoload/plug.vim'
+	let pm_path = expand('~/.vim/bundle/Vundle.vim')
 endif
 
 " ____ Plugins ____
 " =================
 "
-if empty(glob(my_plug_path))
-	silent !curl -fLo my_plug_path --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall | source $MYVIMRC
+filetype off
+if (empty(glob(pm_path)))
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 endif
 
-call plug#begin(my_plugged_path)
+" Do not add a space after the '=' sign
+set rtp +=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" List all plugins with the 'Plug' command
+" List all plugins with the 'Plugin' command
+Plugin 'VundleVim/Vundle.vim'
 
 " Navigation
-Plug 'easymotion/vim-easymotion'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Utility plugins 
-Plug 'Raimondi/delimitMate'
-Plug 'junegunn/vim-easy-align'
-Plug 'mhinz/vim-signify'
-Plug 'scrooloose/syntastic'
-Plug 'Shutnik/jshint2.vim' " Is this conflicting with syn?
-Plug 'skammer/vim-css-color'
+Plugin 'Raimondi/delimitMate'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'skammer/vim-css-color'
 
 " Autocomplete
-Plug 'Valloric/YouCompleteMe'
-Plug 'ternjs/tern_for_vim'
 
 " Syntax help
-Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'vim-scripts/vim-stylus'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+Plugin 'sheerun/vim-polyglot'
 
 " Others
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'rakr/vim-one'
-Plug 'hsanson/vim-android'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'rakr/vim-one'
+Plugin 'arcticicestudio/nord-vim'
 
-" Removed plugins temporarily as polygot 'should' replace them
-" Plug 'helino/vim-json'
-" Plug 'pangloss/vim-javascript'
-
-call plug#end()
+call vundle#end()
 
 " ____ Configuration ____
 " =======================
