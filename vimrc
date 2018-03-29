@@ -117,10 +117,10 @@ inoremap <silent><F2> <C-O>:lprevious<CR>
 vnoremap <silent><F2> :lprevious<CR>
 
 " Navigate between vim windows.
-map <silent> <leader>h :wincmd h<CR>
-map <silent> <leader>l :wincmd l<CR>
-map <silent> <leader>j :wincmd j<CR>
-map <silent> <leader>k :wincmd k<CR>
+"map <silent> <leader>h :wincmd h<CR>
+"map <silent> <leader>l :wincmd l<CR>
+"map <silent> <leader>j :wincmd j<CR>
+"map <silent> <leader>k :wincmd k<CR>
 
 noremap <leader>q :bp<CR>      " Previous buffer
 noremap <leader>w :bn<CR>      " Next buffer
